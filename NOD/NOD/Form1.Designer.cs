@@ -30,11 +30,13 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            label_ШЧ_ПоискПоФамилии = new Label();
             textBox_ШЧ_ПоискПоФамилии = new TextBox();
+            label_ШЧ_ПоискПоФамилии = new Label();
+            tabPage2 = new TabPage();
+            dataGridView1 = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -59,15 +61,13 @@
             tabPage1.Text = "ШЧ";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // textBox_ШЧ_ПоискПоФамилии
             // 
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(787, 112);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
-            tabPage2.UseVisualStyleBackColor = true;
+            textBox_ШЧ_ПоискПоФамилии.Location = new Point(25, 50);
+            textBox_ШЧ_ПоискПоФамилии.Name = "textBox_ШЧ_ПоискПоФамилии";
+            textBox_ШЧ_ПоискПоФамилии.Size = new Size(169, 23);
+            textBox_ШЧ_ПоискПоФамилии.TabIndex = 1;
+            textBox_ШЧ_ПоискПоФамилии.TextChanged += textBox_ШЧ_ПоискПоФамилии_TextChanged;
             // 
             // label_ШЧ_ПоискПоФамилии
             // 
@@ -78,25 +78,37 @@
             label_ШЧ_ПоискПоФамилии.TabIndex = 0;
             label_ШЧ_ПоискПоФамилии.Text = "Поиск по фамилии";
             // 
-            // textBox_ШЧ_ПоискПоФамилии
+            // tabPage2
             // 
-            textBox_ШЧ_ПоискПоФамилии.Location = new Point(25, 50);
-            textBox_ШЧ_ПоискПоФамилии.Multiline = true;
-            textBox_ШЧ_ПоискПоФамилии.Name = "textBox_ШЧ_ПоискПоФамилии";
-            textBox_ШЧ_ПоискПоФамилии.Size = new Size(169, 30);
-            textBox_ШЧ_ПоискПоФамилии.TabIndex = 1;
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(787, 112);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(6, 147);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(788, 150);
+            dataGridView1.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "ШЧД";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -107,5 +119,6 @@
         private TabPage tabPage2;
         private TextBox textBox_ШЧ_ПоискПоФамилии;
         private Label label_ШЧ_ПоискПоФамилии;
+        private DataGridView dataGridView1;
     }
 }
