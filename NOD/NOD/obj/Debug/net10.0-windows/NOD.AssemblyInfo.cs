@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NOD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db02ed2524de99a69de73fa2c5a36e3cd8fb23d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cde0a67068b65088dcce3e5473c8fc450f09d73")]
 [assembly: System.Reflection.AssemblyProductAttribute("NOD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NOD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
