@@ -22,3 +22,4 @@ D:\Cod\GitRepos\NOD\NOD\NOD\bin\Debug\net10.0-windows\runtimes\win-x64\native\SQ
 D:\Cod\GitRepos\NOD\NOD\NOD\bin\Debug\net10.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
 D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.csproj.AssemblyReference.cache
 D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.csproj.Up2Date
+D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.AddEmployee.resources

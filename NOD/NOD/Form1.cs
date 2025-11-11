@@ -11,7 +11,7 @@ namespace NOD
 
         private void textBox_ШЧ_ПоискПоФамилии_TextChanged(object sender, EventArgs e)
         {
-            /*string searchText = textBox_ШЧ_ПоискПоФамилии.Text.Trim();
+            string searchText = textBox_ШЧ_ПоискПоФамилии.Text.Trim();
 
             if (textBox_ШЧ_ПоискПоФамилии.Text.ToString() != "")
             {
@@ -19,9 +19,9 @@ namespace NOD
                     "FROM shch WHERE fio COLLATE NOCASE LIKE '" + textBox_ШЧ_ПоискПоФамилии.Text.ToString() + "%'";
 
                 Connection.ConnectionDataBase(dataGridView1, queryString);
-            }*/
+            }
 
-            string searchText = textBox_ШЧ_ПоискПоФамилии.Text.Trim();
+            /*string searchText = textBox_ШЧ_ПоискПоФамилии.Text.Trim();
 
             // Очистка таблицы при пустом запросе (опционально)
             if (string.IsNullOrEmpty(searchText))
@@ -34,13 +34,19 @@ namespace NOD
             // Безопасный параметризованный запрос
             string query = @"
             SELECT 
-            fio AS [ФИО] 
-            FROM shch14 
+            fio AS [ФИО]
+            FROM shch 
             WHERE fio LIKE @search 
             COLLATE NOCASE";
 
             // Передаём параметр: searchText + "%"
-            DatabaseHelper.ExecuteQueryWithParams(dataGridView1, query, ("@search", searchText + "%"));
+            DatabaseHelper.ExecuteQueryWithParams(dataGridView1, query, ("@search", searchText + "%"));*/
+        }
+
+        private void button_ШЧ_Добавить_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.ShowDialog();
         }
     }
 }

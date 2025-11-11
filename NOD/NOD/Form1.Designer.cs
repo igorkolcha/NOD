@@ -34,6 +34,7 @@
             label_ШЧ_ПоискПоФамилии = new Label();
             tabPage2 = new TabPage();
             dataGridView1 = new DataGridView();
+            button_ШЧ_Добавить = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(button_ШЧ_Добавить);
             tabPage1.Controls.Add(textBox_ШЧ_ПоискПоФамилии);
             tabPage1.Controls.Add(label_ШЧ_ПоискПоФамилии);
             tabPage1.Location = new Point(4, 24);
@@ -96,6 +98,16 @@
             dataGridView1.Size = new Size(788, 150);
             dataGridView1.TabIndex = 1;
             // 
+            // button_ШЧ_Добавить
+            // 
+            button_ШЧ_Добавить.Location = new Point(588, 42);
+            button_ШЧ_Добавить.Name = "button_ШЧ_Добавить";
+            button_ШЧ_Добавить.Size = new Size(141, 31);
+            button_ШЧ_Добавить.TabIndex = 2;
+            button_ШЧ_Добавить.Text = "Добавить";
+            button_ШЧ_Добавить.UseVisualStyleBackColor = true;
+            button_ШЧ_Добавить.Click += button_ШЧ_Добавить_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,5 +132,6 @@
         private TextBox textBox_ШЧ_ПоискПоФамилии;
         private Label label_ШЧ_ПоискПоФамилии;
         private DataGridView dataGridView1;
+        private Button button_ШЧ_Добавить;
     }
 }

@@ -9,7 +9,7 @@ namespace NOD
     internal class DatabaseHelper
     {
         private static readonly string connectionString =
-        $@"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SHCH.db")};Version=3;";
+        $@"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NOD.db")};Version=3;";
 
         public static void ExecuteQueryWithParams(DataGridView dgv, string query, params (string name, object value)[] parameters)
         {
