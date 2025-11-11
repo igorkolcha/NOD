@@ -33,15 +33,11 @@ namespace NOD
 
             // Безопасный параметризованный запрос
             string query = @"
-        SELECT 
-            fio AS [ФИО], 
-            position AS [Должность], 
-            mobile AS [Мобильный], 
-            phone AS [Рабочий телефон], 
-            workshop AS [Цех]
-        FROM shch 
-        WHERE fio LIKE @search 
-        COLLATE NOCASE";
+            SELECT 
+            fio AS [ФИО] 
+            FROM shch14 
+            WHERE fio LIKE @search 
+            COLLATE NOCASE";
 
             // Передаём параметр: searchText + "%"
             DatabaseHelper.ExecuteQueryWithParams(dataGridView1, query, ("@search", searchText + "%"));
