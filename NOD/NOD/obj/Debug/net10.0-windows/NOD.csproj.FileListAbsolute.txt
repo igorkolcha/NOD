@@ -14,3 +14,4 @@ D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\refint\NOD.dll
 D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.pdb
 D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.genruntimeconfig.cache
 D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\ref\NOD.dll
+D:\Cod\GitRepos\NOD\NOD\NOD\obj\Debug\net10.0-windows\NOD.sourcelink.json
