@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace NOD
 {
@@ -47,6 +48,87 @@ namespace NOD
         {
             AddEmployee addEmployee = new AddEmployee();
             addEmployee.ShowDialog();
+        }
+
+        private void label_ШЧ_ПоискПоУчасткам_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_ШЧ_ПоискПоУчасткам_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "Администрация")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+                //comboBox1_ШЧ_Цеха.SelectedIndex = -1;
+
+                string queryString = "SELECT fio, position, mobile, phone FROM shch WHERE position  = " +
+                    "'" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }           
+
+            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ СЦБ1")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE ([Должность] = " +
+                    "'" + "ШЧУ" + "' OR [Должность] = '" + "ШНС" + "' OR [Должность] = '" + "ШН" +
+                    "'OR [Должность] = '" + "ШНД" + "') " +
+                    "AND [Участок]  = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ СЦБ2")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE ([Должность] = " +
+                    "'" + "ШН" + "' OR [Должность] = '" + "ШЧУ" + "' OR [Должность] = '" + "ШНС" +
+                    "'OR [Должность] = '" + "ШНД" + "')  " +
+                    "AND [Участок]  = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ систем автоматики")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ проводной связи")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" +
+                    comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ радиосвязи,ГГО,АЛСН")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "Гараж")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
+
+            if ((string)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "РТУ")
+            {
+                //textBox1_ШЧ_ФИО.Text = "";
+
+                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
+                Connection.ConnectionDataBase(dataGridView1, queryString);
+            }
         }
     }
 }

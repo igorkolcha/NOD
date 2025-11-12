@@ -97,7 +97,7 @@ namespace NOD
                 textBox_AddEmployee_Имя.Text,
                 textBox_AddEmployee_Отчество.Text); 
             }
-            
+            this.Visible = false;
         }
     }
 }

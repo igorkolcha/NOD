@@ -7,28 +7,16 @@
       "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\addemployee.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\addemployee.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\addemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|D:\\Cod\\GitRepos\\NOD\\NOD\\nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,53 +54,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddEmployee.cs",
-              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.cs",
-              "RelativeDocumentMoniker": "NOD\\AddEmployee.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.cs",
-              "RelativeToolTip": "NOD\\AddEmployee.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowFYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T21:02:37.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddEmployee.Designer.cs",
-              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.Designer.cs",
-              "RelativeDocumentMoniker": "NOD\\AddEmployee.Designer.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.Designer.cs",
-              "RelativeToolTip": "NOD\\AddEmployee.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T20:57:36.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.cs",
-              "RelativeDocumentMoniker": "NOD\\AddEmployee.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\AddEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "NOD\\AddEmployee.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T20:51:19.089Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "NOD\\DatabaseHelper.cs",
               "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\DatabaseHelper.cs",
               "RelativeToolTip": "NOD\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T17:22:27.509Z"
+              "WhenOpened": "2025-11-11T17:22:27.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
+              "RelativeDocumentMoniker": "NOD\\Connection.cs",
+              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
+              "RelativeToolTip": "NOD\\Connection.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCgAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T16:37:24.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -122,27 +86,14 @@
               "RelativeDocumentMoniker": "NOD\\Form1.cs",
               "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs*",
               "RelativeToolTip": "NOD\\Form1.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAMwBUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEAAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T16:40:02.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
-              "RelativeDocumentMoniker": "NOD\\Connection.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
-              "RelativeToolTip": "NOD\\Connection.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:37:24.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs",
               "RelativeDocumentMoniker": "NOD\\Form1.cs",
