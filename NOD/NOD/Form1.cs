@@ -65,7 +65,7 @@ namespace NOD
                 string queryString = "SELECT fio, position, mobile, phone FROM shch WHERE position  = " +
                     "'" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
                 Connection.ConnectionDataBase(dataGridView1, queryString);
-            }           
+            }
 
             if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ СЦБ1")
             {
@@ -129,6 +129,11 @@ namespace NOD
                 string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
                 Connection.ConnectionDataBase(dataGridView1, queryString);
             }
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            label_GroupBox_ШЧ_Редактировать.Text = dataGridView1.CurrentCell.Value.ToString();
         }
     }
 }

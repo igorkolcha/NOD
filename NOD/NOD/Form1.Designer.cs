@@ -30,16 +30,34 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            comboBox_ШЧ_ПоискПоУчасткам = new ComboBox();
+            label_ШЧ_ПоискПоУчасткам = new Label();
             button_ШЧ_Добавить = new Button();
             textBox_ШЧ_ПоискПоФамилии = new TextBox();
             label_ШЧ_ПоискПоФамилии = new Label();
             tabPage2 = new TabPage();
             dataGridView1 = new DataGridView();
-            label_ШЧ_ПоискПоУчасткам = new Label();
-            comboBox_ШЧ_ПоискПоУчасткам = new ComboBox();
+            groupBox_ШЧ_Редактировать = new GroupBox();
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция = new ComboBox();
+            comboBox_GroupBox_ШЧ_РедактироватьЦех = new ComboBox();
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток = new ComboBox();
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий = new MaskedTextBox();
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный = new MaskedTextBox();
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность = new ComboBox();
+            pictureBox_GroupBox_ШЧ_Редактировать = new PictureBox();
+            label_GroupBox_ШЧ_РедактироватьПерегон = new Label();
+            label_GroupBox_ШЧ_РедактироватьЦех = new Label();
+            label_GroupBox_ШЧ_РедактироватьУчасток = new Label();
+            label_GroupBox_ШЧ_РедактироватьСтанция = new Label();
+            label_GroupBox_ШЧ_РедактироватьРабочий = new Label();
+            label_GroupBox_ШЧ_РедактироватьМобильный = new Label();
+            label_GroupBox_ШЧ_РедактироватьДолжность = new Label();
+            label_GroupBox_ШЧ_Редактировать = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox_ШЧ_Редактировать.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_GroupBox_ШЧ_Редактировать).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -49,7 +67,7 @@
             tabControl1.Location = new Point(3, 5);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(795, 140);
+            tabControl1.Size = new Size(795, 125);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -62,14 +80,34 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(787, 112);
+            tabPage1.Size = new Size(787, 97);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "ШЧ";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // comboBox_ШЧ_ПоискПоУчасткам
+            // 
+            comboBox_ШЧ_ПоискПоУчасткам.FormattingEnabled = true;
+            comboBox_ШЧ_ПоискПоУчасткам.Items.AddRange(new object[] { "Администрация", "ЛПУ СЦБ1", "ЛПУ СЦБ2", "ЛПУ систем автоматики", "ЛПУ радиосвязи,ГГО,АЛСН", "ЛПУ проводной связи", "Гараж", "РТУ" });
+            comboBox_ШЧ_ПоискПоУчасткам.Location = new Point(250, 50);
+            comboBox_ШЧ_ПоискПоУчасткам.Name = "comboBox_ШЧ_ПоискПоУчасткам";
+            comboBox_ШЧ_ПоискПоУчасткам.Size = new Size(168, 23);
+            comboBox_ШЧ_ПоискПоУчасткам.TabIndex = 4;
+            comboBox_ШЧ_ПоискПоУчасткам.SelectedIndexChanged += comboBox_ШЧ_ПоискПоУчасткам_SelectedIndexChanged;
+            // 
+            // label_ШЧ_ПоискПоУчасткам
+            // 
+            label_ШЧ_ПоискПоУчасткам.AutoSize = true;
+            label_ШЧ_ПоискПоУчасткам.Location = new Point(276, 22);
+            label_ШЧ_ПоискПоУчасткам.Name = "label_ШЧ_ПоискПоУчасткам";
+            label_ШЧ_ПоискПоУчасткам.Size = new Size(113, 15);
+            label_ШЧ_ПоискПоУчасткам.TabIndex = 3;
+            label_ШЧ_ПоискПоУчасткам.Text = "Поиск по участкам";
+            label_ШЧ_ПоискПоУчасткам.Click += label_ШЧ_ПоискПоУчасткам_Click;
+            // 
             // button_ШЧ_Добавить
             // 
-            button_ШЧ_Добавить.Location = new Point(588, 42);
+            button_ШЧ_Добавить.Location = new Point(612, 42);
             button_ШЧ_Добавить.Name = "button_ШЧ_Добавить";
             button_ШЧ_Добавить.Size = new Size(141, 31);
             button_ШЧ_Добавить.TabIndex = 2;
@@ -99,7 +137,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(787, 112);
+            tabPage2.Size = new Size(787, 97);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -107,36 +145,173 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 147);
+            dataGridView1.Location = new Point(6, 129);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(788, 150);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
-            // label_ШЧ_ПоискПоУчасткам
+            // groupBox_ШЧ_Редактировать
             // 
-            label_ШЧ_ПоискПоУчасткам.AutoSize = true;
-            label_ШЧ_ПоискПоУчасткам.Location = new Point(270, 18);
-            label_ШЧ_ПоискПоУчасткам.Name = "label_ШЧ_ПоискПоУчасткам";
-            label_ШЧ_ПоискПоУчасткам.Size = new Size(113, 15);
-            label_ШЧ_ПоискПоУчасткам.TabIndex = 3;
-            label_ШЧ_ПоискПоУчасткам.Text = "Поиск по участкам";
-            label_ШЧ_ПоискПоУчасткам.Click += label_ШЧ_ПоискПоУчасткам_Click;
+            groupBox_ШЧ_Редактировать.Controls.Add(comboBox_GroupBox_ШЧ_РедактироватьСтанция);
+            groupBox_ШЧ_Редактировать.Controls.Add(comboBox_GroupBox_ШЧ_РедактироватьЦех);
+            groupBox_ШЧ_Редактировать.Controls.Add(comboBox_GroupBox_ШЧ_РедактироватьУчасток);
+            groupBox_ШЧ_Редактировать.Controls.Add(maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий);
+            groupBox_ШЧ_Редактировать.Controls.Add(maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный);
+            groupBox_ШЧ_Редактировать.Controls.Add(comboBox_GroupBox_ШЧ_РедактироватьДолжность);
+            groupBox_ШЧ_Редактировать.Controls.Add(pictureBox_GroupBox_ШЧ_Редактировать);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьПерегон);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьЦех);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьУчасток);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьСтанция);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьРабочий);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьМобильный);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_РедактироватьДолжность);
+            groupBox_ШЧ_Редактировать.Controls.Add(label_GroupBox_ШЧ_Редактировать);
+            groupBox_ШЧ_Редактировать.Location = new Point(7, 285);
+            groupBox_ШЧ_Редактировать.Name = "groupBox_ШЧ_Редактировать";
+            groupBox_ШЧ_Редактировать.Size = new Size(785, 337);
+            groupBox_ШЧ_Редактировать.TabIndex = 2;
+            groupBox_ШЧ_Редактировать.TabStop = false;
+            groupBox_ШЧ_Редактировать.Text = "Редактировать";
             // 
-            // comboBox_ШЧ_ПоискПоУчасткам
+            // comboBox_GroupBox_ШЧ_РедактироватьСтанция
             // 
-            comboBox_ШЧ_ПоискПоУчасткам.FormattingEnabled = true;
-            comboBox_ШЧ_ПоискПоУчасткам.Items.AddRange(new object[] { "Администрация", "ЛПУ СЦБ1", "ЛПУ СЦБ2", "ЛПУ систем автоматики", "ЛПУ радиосвязи,ГГО,АЛСН", "ЛПУ проводной связи", "Гараж", "РТУ" });
-            comboBox_ШЧ_ПоискПоУчасткам.Location = new Point(249, 50);
-            comboBox_ШЧ_ПоискПоУчасткам.Name = "comboBox_ШЧ_ПоискПоУчасткам";
-            comboBox_ШЧ_ПоискПоУчасткам.Size = new Size(168, 23);
-            comboBox_ШЧ_ПоискПоУчасткам.TabIndex = 4;
-            comboBox_ШЧ_ПоискПоУчасткам.SelectedIndexChanged += comboBox_ШЧ_ПоискПоУчасткам_SelectedIndexChanged;
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.FormattingEnabled = true;
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.Items.AddRange(new object[] { "Медведка", "п.п.19 км, п.п.25 км", "Замосточье", "Богушевская", "Стайки", "Чепино", "Лужесно", "Лосвидо, Залучье", "Городок", "Прудок, Росляки", "Бычиха", "Езерище, Грибачи", "Княжица", "Ст.Село, Язвино", "Шумилино", "Ловша", "Оболь", "Лучеса", "Крынки, Заболотинка", "Лиозно", "Заольша", "Журжево", "Витьба", "Придвинская" });
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.Location = new Point(184, 167);
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.Name = "comboBox_GroupBox_ШЧ_РедактироватьСтанция";
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.Size = new Size(186, 23);
+            comboBox_GroupBox_ШЧ_РедактироватьСтанция.TabIndex = 15;
+            // 
+            // comboBox_GroupBox_ШЧ_РедактироватьЦех
+            // 
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.FormattingEnabled = true;
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.Items.AddRange(new object[] { "Руководство", "Аппарат управления", "Техотдел", "ПТО", "Диспетчер связи", "Пост ДЦ", "Пост ЭЦ", "Витебск узел", "Богушевская Стайки", "Медведка 25км", "Княжица Оболь", "Витебск Придвинская", "Прудок Езерище", "Чепино Прудок", "Лучеса Заольша", "ЛАЗ", "КТСМ", "Местная связь", "Селекторная связь", "Поездная радиосвязь", "Линейная связь1", "Линейная связь2", "АТС", "ТТС", "ОПС", "СВТИ" });
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.Location = new Point(184, 232);
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.Name = "comboBox_GroupBox_ШЧ_РедактироватьЦех";
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.Size = new Size(187, 23);
+            comboBox_GroupBox_ШЧ_РедактироватьЦех.TabIndex = 14;
+            // 
+            // comboBox_GroupBox_ШЧ_РедактироватьУчасток
+            // 
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.FormattingEnabled = true;
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.Items.AddRange(new object[] { "Администрация", "ЛПУ СЦБ1", "ЛПУ СЦБ2", "ЛПУ систем автоматики", "ЛПУ радиосвязи,ГГО,АЛСН", "ЛПУ проводной связи", "Гараж", "РТУ" });
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.Location = new Point(184, 198);
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.Name = "comboBox_GroupBox_ШЧ_РедактироватьУчасток";
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.Size = new Size(186, 23);
+            comboBox_GroupBox_ШЧ_РедактироватьУчасток.TabIndex = 13;
+            // 
+            // maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий
+            // 
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий.Location = new Point(181, 133);
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий.Mask = "33-00-00";
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий.Name = "maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий";
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий.Size = new Size(190, 23);
+            maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий.TabIndex = 11;
+            // 
+            // maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный
+            // 
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Location = new Point(181, 95);
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Mask = "(__)000-00-00";
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Name = "maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный";
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Size = new Size(190, 23);
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.TabIndex = 10;
+            // 
+            // comboBox_GroupBox_ШЧ_РедактироватьДолжность
+            // 
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.FormattingEnabled = true;
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.Location = new Point(181, 57);
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.Name = "comboBox_GroupBox_ШЧ_РедактироватьДолжность";
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.Size = new Size(190, 23);
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.TabIndex = 9;
+            // 
+            // pictureBox_GroupBox_ШЧ_Редактировать
+            // 
+            pictureBox_GroupBox_ШЧ_Редактировать.Location = new Point(571, 22);
+            pictureBox_GroupBox_ШЧ_Редактировать.Name = "pictureBox_GroupBox_ШЧ_Редактировать";
+            pictureBox_GroupBox_ШЧ_Редактировать.Size = new Size(208, 142);
+            pictureBox_GroupBox_ШЧ_Редактировать.TabIndex = 8;
+            pictureBox_GroupBox_ШЧ_Редактировать.TabStop = false;
+            // 
+            // label_GroupBox_ШЧ_РедактироватьПерегон
+            // 
+            label_GroupBox_ШЧ_РедактироватьПерегон.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьПерегон.Location = new Point(43, 264);
+            label_GroupBox_ШЧ_РедактироватьПерегон.Name = "label_GroupBox_ШЧ_РедактироватьПерегон";
+            label_GroupBox_ШЧ_РедактироватьПерегон.Size = new Size(54, 15);
+            label_GroupBox_ШЧ_РедактироватьПерегон.TabIndex = 7;
+            label_GroupBox_ШЧ_РедактироватьПерегон.Text = "Перегон";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьЦех
+            // 
+            label_GroupBox_ШЧ_РедактироватьЦех.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьЦех.Location = new Point(43, 239);
+            label_GroupBox_ШЧ_РедактироватьЦех.Name = "label_GroupBox_ШЧ_РедактироватьЦех";
+            label_GroupBox_ШЧ_РедактироватьЦех.Size = new Size(28, 15);
+            label_GroupBox_ШЧ_РедактироватьЦех.TabIndex = 6;
+            label_GroupBox_ШЧ_РедактироватьЦех.Text = "Цех";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьУчасток
+            // 
+            label_GroupBox_ШЧ_РедактироватьУчасток.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьУчасток.Location = new Point(43, 202);
+            label_GroupBox_ШЧ_РедактироватьУчасток.Name = "label_GroupBox_ШЧ_РедактироватьУчасток";
+            label_GroupBox_ШЧ_РедактироватьУчасток.Size = new Size(51, 15);
+            label_GroupBox_ШЧ_РедактироватьУчасток.TabIndex = 5;
+            label_GroupBox_ШЧ_РедактироватьУчасток.Text = "Участок";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьСтанция
+            // 
+            label_GroupBox_ШЧ_РедактироватьСтанция.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьСтанция.Location = new Point(43, 168);
+            label_GroupBox_ШЧ_РедактироватьСтанция.Name = "label_GroupBox_ШЧ_РедактироватьСтанция";
+            label_GroupBox_ШЧ_РедактироватьСтанция.Size = new Size(53, 15);
+            label_GroupBox_ШЧ_РедактироватьСтанция.TabIndex = 4;
+            label_GroupBox_ШЧ_РедактироватьСтанция.Text = "Станция";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьРабочий
+            // 
+            label_GroupBox_ШЧ_РедактироватьРабочий.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьРабочий.Location = new Point(43, 136);
+            label_GroupBox_ШЧ_РедактироватьРабочий.Name = "label_GroupBox_ШЧ_РедактироватьРабочий";
+            label_GroupBox_ШЧ_РедактироватьРабочий.Size = new Size(106, 15);
+            label_GroupBox_ШЧ_РедактироватьРабочий.TabIndex = 3;
+            label_GroupBox_ШЧ_РедактироватьРабочий.Text = "Телефон рабочий";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьМобильный
+            // 
+            label_GroupBox_ШЧ_РедактироватьМобильный.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьМобильный.Location = new Point(43, 98);
+            label_GroupBox_ШЧ_РедактироватьМобильный.Name = "label_GroupBox_ШЧ_РедактироватьМобильный";
+            label_GroupBox_ШЧ_РедактироватьМобильный.Size = new Size(124, 15);
+            label_GroupBox_ШЧ_РедактироватьМобильный.TabIndex = 2;
+            label_GroupBox_ШЧ_РедактироватьМобильный.Text = "Телефон мобильный";
+            // 
+            // label_GroupBox_ШЧ_РедактироватьДолжность
+            // 
+            label_GroupBox_ШЧ_РедактироватьДолжность.AutoSize = true;
+            label_GroupBox_ШЧ_РедактироватьДолжность.Location = new Point(43, 60);
+            label_GroupBox_ШЧ_РедактироватьДолжность.Name = "label_GroupBox_ШЧ_РедактироватьДолжность";
+            label_GroupBox_ШЧ_РедактироватьДолжность.Size = new Size(69, 15);
+            label_GroupBox_ШЧ_РедактироватьДолжность.TabIndex = 1;
+            label_GroupBox_ШЧ_РедактироватьДолжность.Text = "Должность";
+            // 
+            // label_GroupBox_ШЧ_Редактировать
+            // 
+            label_GroupBox_ШЧ_Редактировать.AutoSize = true;
+            label_GroupBox_ШЧ_Редактировать.Location = new Point(92, 29);
+            label_GroupBox_ШЧ_Редактировать.Name = "label_GroupBox_ШЧ_Редактировать";
+            label_GroupBox_ШЧ_Редактировать.Size = new Size(38, 15);
+            label_GroupBox_ШЧ_Редактировать.TabIndex = 0;
+            label_GroupBox_ШЧ_Редактировать.Text = "label1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 621);
+            Controls.Add(groupBox_ШЧ_Редактировать);
             Controls.Add(dataGridView1);
             Controls.Add(tabControl1);
             Name = "Form1";
@@ -145,6 +320,9 @@
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox_ШЧ_Редактировать.ResumeLayout(false);
+            groupBox_ШЧ_Редактировать.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_GroupBox_ШЧ_Редактировать).EndInit();
             ResumeLayout(false);
         }
 
@@ -159,5 +337,21 @@
         private Button button_ШЧ_Добавить;
         private Label label_ШЧ_ПоискПоУчасткам;
         private ComboBox comboBox_ШЧ_ПоискПоУчасткам;
+        private GroupBox groupBox_ШЧ_Редактировать;
+        private Label label_GroupBox_ШЧ_Редактировать;
+        private Label label_GroupBox_ШЧ_РедактироватьДолжность;
+        private Label label_GroupBox_ШЧ_РедактироватьМобильный;
+        private Label label_GroupBox_ШЧ_РедактироватьРабочий;
+        private Label label_GroupBox_ШЧ_РедактироватьСтанция;
+        private Label label_GroupBox_ШЧ_РедактироватьПерегон;
+        private Label label_GroupBox_ШЧ_РедактироватьЦех;
+        private Label label_GroupBox_ШЧ_РедактироватьУчасток;
+        private PictureBox pictureBox_GroupBox_ШЧ_Редактировать;
+        private ComboBox comboBox_GroupBox_ШЧ_РедактироватьДолжность;
+        private ComboBox comboBox_GroupBox_ШЧ_РедактироватьСтанция;
+        private MaskedTextBox maskedTextBox_GroupBox_ШЧ_РедактироватьРабочий;
+        private MaskedTextBox maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный;
+        private ComboBox comboBox_GroupBox_ШЧ_РедактироватьЦех;
+        private ComboBox comboBox_GroupBox_ШЧ_РедактироватьУчасток;
     }
 }
