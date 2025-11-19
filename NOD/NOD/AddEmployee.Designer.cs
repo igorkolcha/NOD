@@ -115,8 +115,8 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        //private Label label1;
+        //private Label label2;
         private Label label_AddEmployee_Отчество;
         private TextBox textBox_AddEmployee_Фамилия;
         private TextBox textBox_AddEmployee_Имя;

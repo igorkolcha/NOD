@@ -45,7 +45,7 @@ namespace NOD
 
                         // 2. Используем параметризованный запрос! 
                         // Это очень важно для безопасности и корректной работы с данными.
-                        command.CommandText = "INSERT INTO shch (fio) VALUES (@FIO)";
+                        command.CommandText = "INSERT INTO шч (фио) VALUES (@FIO)";
 
                         // 3. Добавляем параметр
                         command.Parameters.AddWithValue("@FIO", fullFIO);

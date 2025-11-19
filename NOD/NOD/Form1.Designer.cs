@@ -30,6 +30,9 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            linkLabel_ШЧ_РабочиеТелефоны = new LinkLabel();
+            comboBox_ШЧ_ПоискПоЦехам = new ComboBox();
+            label_ШЧ_ПоискПоЦехам = new Label();
             comboBox_ШЧ_ПоискПоУчасткам = new ComboBox();
             label_ШЧ_ПоискПоУчасткам = new Label();
             button_ШЧ_Добавить = new Button();
@@ -60,9 +63,7 @@
             label_GroupBox_ШЧ_РедактироватьМобильный = new Label();
             label_GroupBox_ШЧ_РедактироватьДолжность = new Label();
             label_GroupBox_ШЧ_Редактировать = new Label();
-            label_ШЧ_ПоискПоЦехам = new Label();
-            comboBox_ШЧ_ПоискПоЦехам = new ComboBox();
-            linkLabel_ШЧ_РабочиеТелефоны = new LinkLabel();
+            textBox_GroupBox_ШЧ_РедактироватьРождение = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -98,6 +99,34 @@
             tabPage1.Text = "ШЧ";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // linkLabel_ШЧ_РабочиеТелефоны
+            // 
+            linkLabel_ШЧ_РабочиеТелефоны.AutoSize = true;
+            linkLabel_ШЧ_РабочиеТелефоны.Location = new Point(660, 22);
+            linkLabel_ШЧ_РабочиеТелефоны.Name = "linkLabel_ШЧ_РабочиеТелефоны";
+            linkLabel_ШЧ_РабочиеТелефоны.Size = new Size(113, 15);
+            linkLabel_ШЧ_РабочиеТелефоны.TabIndex = 7;
+            linkLabel_ШЧ_РабочиеТелефоны.TabStop = true;
+            linkLabel_ШЧ_РабочиеТелефоны.Text = "Рабочие телефоны";
+            // 
+            // comboBox_ШЧ_ПоискПоЦехам
+            // 
+            comboBox_ШЧ_ПоискПоЦехам.FormattingEnabled = true;
+            comboBox_ШЧ_ПоискПоЦехам.Items.AddRange(new object[] { "Руководство", "Аппарат управления", "Техотдел", "ПТО", "Диспетчер связи", "Пост ДЦ", "Пост ЭЦ", "Витебск узел", "Богушевская Стайки", "Медведка 25км", "Княжица Оболь", "Витебск Придвинская", "Прудок Езерище", "Чепино Городок", "Лучеса Заольша" });
+            comboBox_ШЧ_ПоискПоЦехам.Location = new Point(461, 50);
+            comboBox_ШЧ_ПоискПоЦехам.Name = "comboBox_ШЧ_ПоискПоЦехам";
+            comboBox_ШЧ_ПоискПоЦехам.Size = new Size(168, 23);
+            comboBox_ШЧ_ПоискПоЦехам.TabIndex = 6;
+            // 
+            // label_ШЧ_ПоискПоЦехам
+            // 
+            label_ШЧ_ПоискПоЦехам.AutoSize = true;
+            label_ШЧ_ПоискПоЦехам.Location = new Point(495, 22);
+            label_ШЧ_ПоискПоЦехам.Name = "label_ШЧ_ПоискПоЦехам";
+            label_ШЧ_ПоискПоЦехам.Size = new Size(96, 15);
+            label_ШЧ_ПоискПоЦехам.TabIndex = 5;
+            label_ШЧ_ПоискПоЦехам.Text = "Поиск по цехам";
+            // 
             // comboBox_ШЧ_ПоискПоУчасткам
             // 
             comboBox_ШЧ_ПоискПоУчасткам.FormattingEnabled = true;
@@ -116,7 +145,6 @@
             label_ШЧ_ПоискПоУчасткам.Size = new Size(113, 15);
             label_ШЧ_ПоискПоУчасткам.TabIndex = 3;
             label_ШЧ_ПоискПоУчасткам.Text = "Поиск по участкам";
-            label_ШЧ_ПоискПоУчасткам.Click += label_ШЧ_ПоискПоУчасткам_Click;
             // 
             // button_ШЧ_Добавить
             // 
@@ -166,6 +194,7 @@
             // 
             // groupBox_ШЧ_Редактировать
             // 
+            groupBox_ШЧ_Редактировать.Controls.Add(textBox_GroupBox_ШЧ_РедактироватьРождение);
             groupBox_ШЧ_Редактировать.Controls.Add(button_GroupBox_ШЧ_ДобавитьФото);
             groupBox_ШЧ_Редактировать.Controls.Add(maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения);
             groupBox_ШЧ_Редактировать.Controls.Add(textBox_GroupBox_ШЧ_РедактироватьДомАдрес);
@@ -246,6 +275,7 @@
             button_GoupBox_ШЧ_РедактироватьСохранить.TabIndex = 17;
             button_GoupBox_ШЧ_РедактироватьСохранить.Text = "Сохранить";
             button_GoupBox_ШЧ_РедактироватьСохранить.UseVisualStyleBackColor = true;
+            button_GoupBox_ШЧ_РедактироватьСохранить.Click += button_GoupBox_ШЧ_РедактироватьСохранить_Click;
             // 
             // textBox_GroupBox_ШЧ_РедактироватьПерегон
             // 
@@ -292,7 +322,7 @@
             // maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный
             // 
             maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Location = new Point(149, 95);
-            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Mask = "(__)000-00-00";
+            maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Mask = "(99) 000-00-00";
             maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Name = "maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный";
             maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.Size = new Size(190, 23);
             maskedTextBox_GroupBox_ШЧ_РедактироватьМобильный.TabIndex = 10;
@@ -300,6 +330,7 @@
             // comboBox_GroupBox_ШЧ_РедактироватьДолжность
             // 
             comboBox_GroupBox_ШЧ_РедактироватьДолжность.FormattingEnabled = true;
+            comboBox_GroupBox_ШЧ_РедактироватьДолжность.Items.AddRange(new object[] { "ШЧУ", "ШНС", "ШН", "ШНД", "ШЦМ" });
             comboBox_GroupBox_ШЧ_РедактироватьДолжность.Location = new Point(149, 57);
             comboBox_GroupBox_ШЧ_РедактироватьДолжность.Name = "comboBox_GroupBox_ШЧ_РедактироватьДолжность";
             comboBox_GroupBox_ШЧ_РедактироватьДолжность.Size = new Size(190, 23);
@@ -385,33 +416,12 @@
             label_GroupBox_ШЧ_Редактировать.TabIndex = 0;
             label_GroupBox_ШЧ_Редактировать.Text = "label1";
             // 
-            // label_ШЧ_ПоискПоЦехам
+            // textBox_GroupBox_ШЧ_РедактироватьРождение
             // 
-            label_ШЧ_ПоискПоЦехам.AutoSize = true;
-            label_ШЧ_ПоискПоЦехам.Location = new Point(495, 22);
-            label_ШЧ_ПоискПоЦехам.Name = "label_ШЧ_ПоискПоЦехам";
-            label_ШЧ_ПоискПоЦехам.Size = new Size(96, 15);
-            label_ШЧ_ПоискПоЦехам.TabIndex = 5;
-            label_ШЧ_ПоискПоЦехам.Text = "Поиск по цехам";
-            // 
-            // comboBox_ШЧ_ПоискПоЦехам
-            // 
-            comboBox_ШЧ_ПоискПоЦехам.FormattingEnabled = true;
-            comboBox_ШЧ_ПоискПоЦехам.Items.AddRange(new object[] { "Руководство", "Аппарат управления", "Техотдел", "ПТО", "Диспетчер связи", "Пост ДЦ", "Пост ЭЦ", "Витебск узел", "Богушевская Стайки", "Медведка 25км", "Княжица Оболь", "Витебск Придвинская", "Прудок Езерище", "Чепино Городок", "Лучеса Заольша" });
-            comboBox_ШЧ_ПоискПоЦехам.Location = new Point(461, 50);
-            comboBox_ШЧ_ПоискПоЦехам.Name = "comboBox_ШЧ_ПоискПоЦехам";
-            comboBox_ШЧ_ПоискПоЦехам.Size = new Size(168, 23);
-            comboBox_ШЧ_ПоискПоЦехам.TabIndex = 6;
-            // 
-            // linkLabel_ШЧ_РабочиеТелефоны
-            // 
-            linkLabel_ШЧ_РабочиеТелефоны.AutoSize = true;
-            linkLabel_ШЧ_РабочиеТелефоны.Location = new Point(660, 22);
-            linkLabel_ШЧ_РабочиеТелефоны.Name = "linkLabel_ШЧ_РабочиеТелефоны";
-            linkLabel_ШЧ_РабочиеТелефоны.Size = new Size(113, 15);
-            linkLabel_ШЧ_РабочиеТелефоны.TabIndex = 7;
-            linkLabel_ШЧ_РабочиеТелефоны.TabStop = true;
-            linkLabel_ШЧ_РабочиеТелефоны.Text = "Рабочие телефоны";
+            textBox_GroupBox_ШЧ_РедактироватьРождение.Location = new Point(482, 316);
+            textBox_GroupBox_ШЧ_РедактироватьРождение.Name = "textBox_GroupBox_ШЧ_РедактироватьРождение";
+            textBox_GroupBox_ШЧ_РедактироватьРождение.Size = new Size(179, 23);
+            textBox_GroupBox_ШЧ_РедактироватьРождение.TabIndex = 23;
             // 
             // Form1
             // 
@@ -470,5 +480,6 @@
         private LinkLabel linkLabel_ШЧ_РабочиеТелефоны;
         private ComboBox comboBox_ШЧ_ПоискПоЦехам;
         private Label label_ШЧ_ПоискПоЦехам;
+        private TextBox textBox_GroupBox_ШЧ_РедактироватьРождение;
     }
 }

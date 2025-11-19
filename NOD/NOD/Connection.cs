@@ -14,7 +14,19 @@ namespace NOD
         static string connectionString = @"Data Source=NOD.db;Version=3;";
         // Замените .mdb на .db или другое расширение, используемое для SQLite.
 
-       
+        // Для SELECT-запросов (заполнение DataGridView и т.п.)
+        public static void FillTable(DataGridView dgv, string connectionString, string selectQuery)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var adapter = new SQLiteDataAdapter(selectQuery, conn))
+            {
+                var table = new DataTable();
+                adapter.Fill(table);
+                dgv.DataSource = table;
+            }
+        }
+
+        // Для UPDATE/INSERT/DELETE — использовать параметризованные команды, как выше
         /// <summary>
         /// Подключается к базе данных SQLite, выполняет запрос и заполняет DataGridView.
         /// </summary>
