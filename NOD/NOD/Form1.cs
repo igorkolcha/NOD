@@ -281,6 +281,10 @@ namespace NOD
         }
         #endregion
 
+        #region
+        #endregion
+
+
         #region TextBox
         private void textBox_ШЧ_ПоискПоФамилии_TextChanged(object sender, EventArgs e)
         {
@@ -291,7 +295,7 @@ namespace NOD
                 string queryString = "SELECT фио as ФИО, должность as Должность, мобильный as Мобильный, телефон as [Рабочий телефон], цех as Цех " +
                     "FROM шч WHERE фио COLLATE NOCASE LIKE '" + textBox_ШЧ_ПоискПоФамилии.Text.ToString() + "%'";
 
-               
+
 
                 //Connection.ConnectionDataBase(dataGridView1, queryString);
                 Connection.FillTable(dataGridView1, connectionString, queryString);
@@ -331,6 +335,19 @@ namespace NOD
         {
             UpdateData(connectionString);
             groupBox_ШЧ_Редактировать.Visible = false;
+        }
+
+        private void button_GroupBox_ШЧ_ДобавитьФото_Click(object sender, EventArgs e)
+        {
+            string fio = label_GroupBox_ШЧ_Редактировать.Text.Trim();
+
+            if (string.IsNullOrEmpty(fio))
+            {
+                MessageBox.Show("Сначала выберите сотрудника (ФИО должно быть указано).", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            UpdatePhoto.UpdatePhotos(fio);
         }
         #endregion
 
@@ -417,8 +434,12 @@ namespace NOD
         {
             label_GroupBox_ШЧ_Редактировать.Text = dataGridView1.CurrentCell?.Value?.ToString();
             groupBox_ШЧ_Редактировать.Visible = true;
+            
             ConnectionShow(dataGridView1);
+            HideEmptyColumns.HideDataGridEmptyColumns(dataGridView1);
         }
         #endregion
+
+       
     }
 }

@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\hideemptycolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\hideemptycolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\updatephoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|solutionrelative:nod\\updatephoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49C2ECF3-8426-390E-58EF-F163E868C2C1}|NOD\\NOD.csproj|d:\\cod\\gitrepos\\nod\\nod\\nod\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,54 +66,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "HideEmptyColumns.cs",
+              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\HideEmptyColumns.cs",
+              "RelativeDocumentMoniker": "NOD\\HideEmptyColumns.cs",
+              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\HideEmptyColumns.cs",
+              "RelativeToolTip": "NOD\\HideEmptyColumns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T12:04:49.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "NOD\\Form1.Designer.cs",
               "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.Designer.cs",
               "RelativeToolTip": "NOD\\Form1.Designer.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAawBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T20:15:53.507Z",
+              "WhenOpened": "2025-11-19T23:29:05.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "UpdatePhoto.cs",
+              "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\UpdatePhoto.cs",
+              "RelativeDocumentMoniker": "NOD\\UpdatePhoto.cs",
+              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\UpdatePhoto.cs",
+              "RelativeToolTip": "NOD\\UpdatePhoto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T22:39:42.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs",
               "RelativeDocumentMoniker": "NOD\\Form1.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "NOD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "NOD\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T18:58:41.3Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "InsertPhoto.cs",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\InsertPhoto.cs",
               "RelativeDocumentMoniker": "NOD\\InsertPhoto.cs",
               "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\InsertPhoto.cs",
               "RelativeToolTip": "NOD\\InsertPhoto.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T16:52:29.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-19T16:52:29.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Connection.cs",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
               "RelativeDocumentMoniker": "NOD\\Connection.cs",
               "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Connection.cs",
               "RelativeToolTip": "NOD\\Connection.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowBEAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T16:37:24.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T16:37:24.312Z"
             },
             {
               "$type": "Document",
@@ -113,9 +145,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs",
               "RelativeDocumentMoniker": "NOD\\Form1.cs",
-              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs",
-              "RelativeToolTip": "NOD\\Form1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD0AAAAbAAAAAAAAAA==",
+              "ToolTip": "D:\\Cod\\GitRepos\\NOD\\NOD\\NOD\\Form1.cs*",
+              "RelativeToolTip": "NOD\\Form1.cs*",
+              "ViewState": "AgIAAFABAAAAAAAAAAAmwLYBAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T16:40:02.138Z",
               "EditorCaption": ""
