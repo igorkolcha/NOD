@@ -234,7 +234,7 @@
             // 
             // maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения
             // 
-            maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения.Location = new Point(454, 325);
+            maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения.Location = new Point(572, 325);
             maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения.Mask = "00/00/0000";
             maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения.Name = "maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения";
             maskedTextBox_GroupBox_ШЧ_РедактироватьДеньРождения.Size = new Size(179, 23);
@@ -251,7 +251,7 @@
             // label_GroupBox_ШЧ_РедактироватьДеньРождения
             // 
             label_GroupBox_ШЧ_РедактироватьДеньРождения.AutoSize = true;
-            label_GroupBox_ШЧ_РедактироватьДеньРождения.Location = new Point(356, 333);
+            label_GroupBox_ШЧ_РедактироватьДеньРождения.Location = new Point(474, 333);
             label_GroupBox_ШЧ_РедактироватьДеньРождения.Name = "label_GroupBox_ШЧ_РедактироватьДеньРождения";
             label_GroupBox_ШЧ_РедактироватьДеньРождения.Size = new Size(92, 15);
             label_GroupBox_ШЧ_РедактироватьДеньРождения.TabIndex = 19;
@@ -280,7 +280,7 @@
             // 
             textBox_GroupBox_ШЧ_РедактироватьПерегон.Location = new Point(87, 327);
             textBox_GroupBox_ШЧ_РедактироватьПерегон.Name = "textBox_GroupBox_ШЧ_РедактироватьПерегон";
-            textBox_GroupBox_ШЧ_РедактироватьПерегон.Size = new Size(251, 23);
+            textBox_GroupBox_ШЧ_РедактироватьПерегон.Size = new Size(331, 23);
             textBox_GroupBox_ШЧ_РедактироватьПерегон.TabIndex = 16;
             // 
             // comboBox_GroupBox_ШЧ_РедактироватьСтанция
@@ -410,9 +410,10 @@
             // label_GroupBox_ШЧ_Редактировать
             // 
             label_GroupBox_ШЧ_Редактировать.AutoSize = true;
-            label_GroupBox_ШЧ_Редактировать.Location = new Point(89, 22);
+            label_GroupBox_ШЧ_Редактировать.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            label_GroupBox_ШЧ_Редактировать.Location = new Point(188, 19);
             label_GroupBox_ШЧ_Редактировать.Name = "label_GroupBox_ШЧ_Редактировать";
-            label_GroupBox_ШЧ_Редактировать.Size = new Size(38, 15);
+            label_GroupBox_ШЧ_Редактировать.Size = new Size(60, 22);
             label_GroupBox_ШЧ_Редактировать.TabIndex = 0;
             label_GroupBox_ШЧ_Редактировать.Text = "label1";
             // 

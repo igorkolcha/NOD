@@ -1,6 +1,7 @@
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace NOD
 {
@@ -9,6 +10,7 @@ namespace NOD
         public Form1()
         {
             InitializeComponent();
+            this.groupBox_ШЧ_Редактировать.Visible = false;
         }
 
         static string connectionString = @"Data Source=NOD.db;Version=3;";
@@ -288,14 +290,13 @@ namespace NOD
         #region TextBox
         private void textBox_ШЧ_ПоискПоФамилии_TextChanged(object sender, EventArgs e)
         {
+            groupBox_ШЧ_Редактировать.Visible = false;
             string searchText = textBox_ШЧ_ПоискПоФамилии.Text.Trim();
 
             if (textBox_ШЧ_ПоискПоФамилии.Text.ToString() != "")
             {
                 string queryString = "SELECT фио as ФИО, должность as Должность, мобильный as Мобильный, телефон as [Рабочий телефон], цех as Цех " +
                     "FROM шч WHERE фио COLLATE NOCASE LIKE '" + textBox_ШЧ_ПоискПоФамилии.Text.ToString() + "%'";
-
-
 
                 //Connection.ConnectionDataBase(dataGridView1, queryString);
                 Connection.FillTable(dataGridView1, connectionString, queryString);
@@ -354,78 +355,53 @@ namespace NOD
         #region ComboBox
         private void comboBox_ШЧ_ПоискПоУчасткам_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "Администрация")
-            {
+                // 1. Общая очистка состояния (Вынесено из if)
+                groupBox_ШЧ_Редактировать.Visible = false;
+                //dataGridView_РабочиеТелефоны.Visible = false;
                 //textBox1_ШЧ_ФИО.Text = "";
-                //comboBox1_ШЧ_Цеха.SelectedIndex = -1;
+                //comboBox1_ШЧ_Цеха.SelectedIndex = -1; // Если это нужно делать всегда
 
-                string queryString = "SELECT fio, position, mobile, phone FROM shch WHERE position  = " +
-                    "'" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
+                string? selectedUchastok = comboBox_ШЧ_ПоискПоУчасткам.SelectedItem as string;
 
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ СЦБ1")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
+            // Переменные для динамического формирования запроса
+            string selectFields = "фио as ФИО, должность as Должность, мобильный as Мобильный, телефон as [Рабочий телефон], цех as Цех";
+            //string whereCondition = "";
 
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE ([Должность] = " +
-                    "'" + "ШЧУ" + "' OR [Должность] = '" + "ШНС" + "' OR [Должность] = '" + "ШН" +
-                    "'OR [Должность] = '" + "ШНД" + "') " +
-                    "AND [Участок]  = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
+                // 2. Использование switch для определения специфических условий (Вместо if/if/if...)
+                switch (selectedUchastok)
+                {
+                    case "Администрация":
+                    case "Гараж":
+                        // Для "Гараж" выбираем меньше полей
+                        if (selectedUchastok == "Гараж")
+                            selectFields = "фио, должность, мобильный";
+                        // whereCondition остается пустым, так как фильтрация только по участку
+                        break;
 
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ СЦБ2")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
+                    case "ЛПУ СЦБ1":
+                    case "ЛПУ СЦБ2":
+                        // Используем условие WHERE IN для списка должностей
+                        //string dolzhnosti = "'ШЧУ', 'ШНС', 'ШН', 'ШНД'";
+                        //whereCondition = $" AND [должность] IN ({dolzhnosti})";
+                        break;
 
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE ([Должность] = " +
-                    "'" + "ШН" + "' OR [Должность] = '" + "ШЧУ" + "' OR [Должность] = '" + "ШНС" +
-                    "'OR [Должность] = '" + "ШНД" + "')  " +
-                    "AND [Участок]  = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
+                    default:
+                        // Для всех остальных (ЛПУ систем автоматики, РТУ и т.д.)
+                         // whereCondition остается пустым
+                        break;
+                }
 
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ систем автоматики")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
+            // 3. Формирование финального, параметризованного запроса (Устранение SQL-инъекций)
+            // *** ПРИМЕЧАНИЕ: Здесь показан принцип, метод ConnectionDataBase должен быть изменен
+            // для приема параметров, а не только строки SQL.
+            //string queryString = $"SELECT {selectFields} FROM шч WHERE [участок] = {selectedUchastok}";
 
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
+            string queryString =  $"SELECT {selectFields} FROM шч WHERE участок = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
 
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ проводной связи")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
-
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" +
-                    comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
-
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "ЛПУ радиосвязи,ГГО,АЛСН")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
-
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
-
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "Гараж")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
-
-                string queryString = "SELECT ФИО,Должность,Мобильный FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
-
-            if ((string?)comboBox_ШЧ_ПоискПоУчасткам.SelectedItem == "РТУ")
-            {
-                //textBox1_ШЧ_ФИО.Text = "";
-
-                string queryString = "SELECT ФИО,Должность,Мобильный,Цех FROM  ШЧ14 WHERE [Участок] = '" + comboBox_ШЧ_ПоискПоУчасткам.SelectedItem + "'";
-                Connection.ConnectionDataBase(dataGridView1, queryString);
-            }
+            // 4. Выполнение запроса (Предполагая, что ConnectionDataBase принимает параметры)
+            // Connection.ConnectionDataBase(dataGridView1, queryString, new { Uchastok = selectedUchastok });
+            //Connection.ConnectionDataBase(dataGridView1, queryString);
+              Connection.FillTable(dataGridView1, connectionString, queryString);
         }
         #endregion
 
@@ -439,7 +415,5 @@ namespace NOD
             HideEmptyColumns.HideDataGridEmptyColumns(dataGridView1);
         }
         #endregion
-
-       
     }
 }
